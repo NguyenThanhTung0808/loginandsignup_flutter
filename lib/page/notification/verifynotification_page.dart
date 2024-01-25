@@ -12,51 +12,48 @@ class _VerifyNotificationPageState extends State<VerifyNotificationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 65,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Great, You’re Almost There",
               style: TextStyle(
                   color: Colors.orange,
                   fontSize: 20,
                   fontWeight: FontWeight.w700),
             ),
-            SizedBox(height: 4),
-            Container(
-              child: Text(
-                "To complete your registration process, you will need to",
-                style: TextStyle(
-                  color: Colors.black12,
-                ),
+            const SizedBox(height: 4),
+            const Text(
+              "To complete your registration process, you will need to",
+              style: TextStyle(
+                color: Colors.black12,
               ),
             ),
-            SizedBox(height: 100),
+            const SizedBox(height: 100),
             Align(
               alignment: Alignment.center,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 39),
+                padding: const EdgeInsets.symmetric(horizontal: 39),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width:40,
+                      width: 40,
                       height: 60,
                       alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.orange),
-                      child: Text(
+                      decoration: const BoxDecoration(
+                          shape: BoxShape.circle, color: Colors.orange),
+                      child: const Text(
                         "1",
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.w700),
                       ),
                     ),
-                    Expanded(
+                    const Expanded(
                       child: Padding(
                         padding: EdgeInsets.only(
                           left: 7,
@@ -86,27 +83,25 @@ class _VerifyNotificationPageState extends State<VerifyNotificationPage> {
                 ),
               ),
             ),
-            SizedBox(height: 31),
+            const SizedBox(height: 31),
             Padding(
-              padding: EdgeInsets.only(left: 39),
+              padding: const EdgeInsets.only(left: 39),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    width:40,
+                    width: 40,
                     height: 60,
                     alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.orange),
-                    child: Text(
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.orange),
+                    child: const Text(
                       "2",
                       style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700),
+                          color: Colors.white, fontWeight: FontWeight.w700),
                     ),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(
                       left: 7,
                       top: 3,
@@ -136,26 +131,24 @@ class _VerifyNotificationPageState extends State<VerifyNotificationPage> {
                 ],
               ),
             ),
-            SizedBox(height: 22),
+            const SizedBox(height: 22),
             Padding(
-              padding: EdgeInsets.only(left: 39),
+              padding: const EdgeInsets.only(left: 39),
               child: Row(
                 children: [
                   Container(
-                    width:40,
+                    width: 40,
                     height: 60,
                     alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.orange),
-                    child: Text(
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: Colors.orange),
+                    child: const Text(
                       "3",
                       style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700),
+                          color: Colors.white, fontWeight: FontWeight.w700),
                     ),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(
                       left: 7,
                       top: 8,
@@ -172,21 +165,17 @@ class _VerifyNotificationPageState extends State<VerifyNotificationPage> {
                 ],
               ),
             ),
-            SizedBox(height: 100),
-            Container(
-                child:
-                Stack(children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 30),
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        backgroundColor: Colors.orange, // foreground
-                      ),
-                      child: Text("Let's Continue",
-                          style: TextStyle(fontSize: 25)),
-                      onPressed: () {}))
-            ])),
+            const SizedBox(height: 100),
+            Padding(
+                padding: const EdgeInsets.only(left: 30),
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.white,
+                      backgroundColor: Colors.orange, // foreground
+                    ),
+                    child: const Text("Let's Continue",
+                        style: TextStyle(fontSize: 25)),
+                    onPressed: () {})),
           ],
         ),
       ),

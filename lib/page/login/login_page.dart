@@ -21,12 +21,12 @@ class _LoginPageState extends State<LoginPage> {
                     bottom: MediaQuery.of(context).viewInsets.bottom),
                 child: Form(
                     child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 65),
+                        padding: const EdgeInsets.symmetric(horizontal: 65),
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Padding(
+                              const Padding(
                                   padding: EdgeInsets.only(left: 100),
                                   child: Text(
                                     "Login",
@@ -35,16 +35,16 @@ class _LoginPageState extends State<LoginPage> {
                                         fontSize: 30,
                                         fontWeight: FontWeight.w700),
                                   )),
-                              SizedBox(height: 55),
+                              const SizedBox(height: 55),
                               Padding(
-                                padding: EdgeInsets.only(left: 2),
+                                padding: const EdgeInsets.only(left: 2),
                                 child: TextField(
                                   onChanged: (newPhone) {
                                     print(newPhone);
                                     phone = newPhone;
                                   },
                                   keyboardType: TextInputType.text,
-                                  style: TextStyle(fontSize: 10),
+                                  style: const TextStyle(fontSize: 10),
                                   decoration: InputDecoration(
                                       labelText: 'Phone',
                                       border: OutlineInputBorder(
@@ -52,16 +52,16 @@ class _LoginPageState extends State<LoginPage> {
                                               BorderRadius.circular(10))),
                                 ),
                               ),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               Padding(
-                                padding: EdgeInsets.only(left: 2),
+                                padding: const EdgeInsets.only(left: 2),
                                 child: TextField(
                                   onChanged: (newDigit) {
                                     print(newDigit);
                                     digit = newDigit;
                                   },
                                   keyboardType: TextInputType.text,
-                                  style: TextStyle(fontSize: 10),
+                                  style: const TextStyle(fontSize: 10),
                                   decoration: InputDecoration(
                                       labelText: '6 digit',
                                       border: OutlineInputBorder(
@@ -69,45 +69,35 @@ class _LoginPageState extends State<LoginPage> {
                                               BorderRadius.circular(10))),
                                 ),
                               ),
-                              SizedBox(height: 20),
-                              Container(
-                                child: Stack(
-                                  children: [
-                                    Padding(
-                                        padding: EdgeInsets.only(left: 2),
-                                        child: ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
-                                            primary: Colors.orange,
-                                            // background
-                                            onPrimary:
-                                                Colors.white, // foreground
-                                          ),
-                                          child: Text(
-                                              '           Login           ',
-                                              style: TextStyle(fontSize: 30)),
-                                          onPressed: () {},
-                                        ))
-                                  ],
-                                ),
-                              ),
-                              SizedBox(height: 30),
-                              Container(
-                                  child: Padding(
-                                      padding: EdgeInsets.only(left: 10),
-                                      child: Text(
-                                        'Already have an account? ',
-                                      ))),
-                              Container(
-                                child: Padding(
+                              const SizedBox(height: 20),
+                              Padding(
+                                  padding: const EdgeInsets.only(left: 2),
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      foregroundColor: Colors.white,
+                                      backgroundColor:
+                                          Colors.orange, // foreground
+                                    ),
+                                    child: const Text(
+                                        '          Login            ',
+                                        style: TextStyle(fontSize: 30)),
+                                    onPressed: () {},
+                                  )),
+                              const SizedBox(height: 30),
+                              const Padding(
                                   padding: EdgeInsets.only(left: 10),
-                                  child: Text.rich(TextSpan(
-                                      text: 'Sigup up',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.orange,
-                                        decoration: TextDecoration.underline,
-                                      ))),
-                                ),
+                                  child: Text(
+                                    'Already have an account? ',
+                                  )),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 10),
+                                child: Text.rich(TextSpan(
+                                    text: 'Sigup up',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.orange,
+                                      decoration: TextDecoration.underline,
+                                    ))),
                               )
                             ]))))));
   }

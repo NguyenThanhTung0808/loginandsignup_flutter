@@ -1,40 +1,32 @@
 import 'package:flutter/material.dart';
 
-class BackOfNidPage extends StatefulWidget {
-  const BackOfNidPage({super.key});
+class YourPhotoPage extends StatefulWidget {
+  const YourPhotoPage({super.key});
 
   @override
-  State<BackOfNidPage> createState() => _BackOfNidPageState();
+  State<YourPhotoPage> createState() => _YourPhotoPageState();
 }
 
-class _BackOfNidPageState extends State<BackOfNidPage> {
+class _YourPhotoPageState extends State<YourPhotoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 5,
           vertical: 30,
         ),
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height:10),
-              Padding(
-                padding: EdgeInsets.only(left: 33),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 36),
+              const SizedBox(height:10),
+              const Padding(
+                      padding: EdgeInsets.only(left: 140),
                       child: Text(
-                        "Take a front photo of your NID Card",
-                      ),
-                    ),
-                  ],
+                        "Take your photo",
                 ),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Stack(
                 children: <Widget>[
                   Image.asset("assets/images/img_rectangle.png"),
@@ -44,7 +36,7 @@ class _BackOfNidPageState extends State<BackOfNidPage> {
                     right: 45,
                     bottom: 10,
                     child: Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.orange),
                       child: Image.asset(
@@ -57,15 +49,15 @@ class _BackOfNidPageState extends State<BackOfNidPage> {
                   ),
                 ],
               ),
-              SizedBox(height: 5.80),
+              const SizedBox(height: 5.80),
               Padding(
-                  padding: EdgeInsets.only(left: 135),
+                  padding: const EdgeInsets.only(left: 140),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.white,
                         backgroundColor: Colors.orange, // foreground
                       ),
-                      child: Text("Continue to selfie",
+                      child: const Text("            Verify            ",
                           style: TextStyle(fontSize: 10)),
                       onPressed: () {}))
             ]),

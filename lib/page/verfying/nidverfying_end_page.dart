@@ -11,22 +11,23 @@ class NidVerfyingPage extends StatefulWidget {
 class _NidVerfyingPageState extends State<NidVerfyingPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body:  Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: EdgeInsets.only(left: 90),
-              child: Text(
-                "Verify successful",style: TextStyle(
+    return const Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: EdgeInsets.only(left: 90),
+            child: Text(
+              "Verify successful",
+              style: TextStyle(
                 color: Colors.orange,
                 fontSize: 25,
-                fontWeight:FontWeight.w700,
-              ),
+                fontWeight: FontWeight.w700,
               ),
             ),
-          ],
-        ),
-      );
+          ),
+        ],
+      ),
+    );
   }
 }
